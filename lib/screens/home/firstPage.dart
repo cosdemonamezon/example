@@ -2,6 +2,7 @@ import 'package:example/screens/home/homePage.dart';
 import 'package:example/screens/notification/notificationsPage.dart';
 import 'package:example/screens/products/products.dart';
 import 'package:example/screens/salse/salseReport.dart';
+import 'package:example/widgets/AppDrawer.dart';
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatefulWidget {
@@ -49,7 +50,7 @@ class _FirstPageState extends State<FirstPage> {
         ),
         centerTitle: true,
       ),
-      drawer: Drawer(),
+      drawer: AppDrawer(),
       extendBody: true,
       body: SafeArea(
         child: PageStorage(
@@ -101,3 +102,5 @@ class _FirstPageState extends State<FirstPage> {
     );
   }
 }
+
+
