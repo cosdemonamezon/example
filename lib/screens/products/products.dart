@@ -42,14 +42,18 @@ class _ProductsState extends State<Products> {
                                 side: BorderSide(color: Colors.grey, width: 2.0)),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Expanded(
-                                child: Row(
-                                  children: [
-                                    Image.asset(
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    flex: 3,
+                                    child: Image.asset(
                                       allProducts[index].imgae,
-                                      scale: 3,
+                                      //scale: 3,
                                     ),
-                                    Column(
+                                  ),
+                                  Expanded(
+                                    flex: 7,
+                                    child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         // Row(
@@ -152,9 +156,9 @@ class _ProductsState extends State<Products> {
                                           ),
                                         )
                                       ],
-                                    )
-                                  ],
-                                ),
+                                    ),
+                                  )
+                                ],
                               ),
                             ),
                           ),
