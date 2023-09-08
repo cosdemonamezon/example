@@ -22,7 +22,7 @@ class _ShowNewsPageState extends State<ShowNewsPage> {
           children: [
             Container(
               //color: Colors.amber,
-              height: size.height * 0.8,
+              height: size.height,
               child: GridView.count(
                 primary: false,
                 padding: const EdgeInsets.all(10),
