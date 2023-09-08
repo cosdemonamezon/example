@@ -1,3 +1,4 @@
+import 'package:example/screens/Register/registerPage.dart';
 import 'package:example/screens/home/firstPage.dart';
 import 'package:example/screens/login/widgets/InputTextForm.dart';
 import 'package:flutter/material.dart';
@@ -77,7 +78,8 @@ class _LoginPageState extends State<LoginPage> {
                   onTap: () {
                     if (loginFormKey.currentState!.validate()) {
                       //Navigator.push(context, MaterialPageRoute(builder: (context)=> FirstPage()));
-                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => FirstPage()), (route) => false);
+                      Navigator.pushAndRemoveUntil(
+                          context, MaterialPageRoute(builder: (context) => FirstPage()), (route) => false);
                     } else {
                       print('ไม่ได้กรอกข้อมูล');
                     }
@@ -89,6 +91,29 @@ class _LoginPageState extends State<LoginPage> {
                     child: Center(
                         child: Text(
                       'Login',
+                      style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                    )),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: size.height * 0.02,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return RegisterPage();
+                    }));
+                  },
+                  child: Container(
+                    height: size.height * 0.06,
+                    width: double.infinity,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.blue),
+                    child: Center(
+                        child: Text(
+                      'ลงทะเบียน',
                       style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
                     )),
                   ),

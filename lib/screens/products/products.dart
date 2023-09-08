@@ -88,6 +88,7 @@ class _ProductsState extends State<Products> {
                                                 style: TextStyle(
                                                   fontFamily: 'Prompt',
                                                   fontSize: 13,
+                                                  fontWeight: FontWeight.bold,
                                                 ),
                                                 maxLines: 2,
                                                 overflow: TextOverflow.clip,
