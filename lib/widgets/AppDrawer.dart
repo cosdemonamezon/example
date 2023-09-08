@@ -1,3 +1,4 @@
+import 'package:example/screens/setting/editProfile.dart';
 import 'package:example/widgets/ContainerSetting.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +45,9 @@ class _AppDrawerState extends State<AppDrawer> {
                   leadingIcon: 'assets/icons/icon_person.png',
                   title: 'เเก้ไขโปรไฟล์',
                   trailingIcon: 'assets/icons/icon_back.png',
-                  press: () {},
+                  press: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()));
+                  },
                 ),
                 SizedBox(
                   height: size.height * 0.02,
