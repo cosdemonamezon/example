@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                     if (value == null || value.isEmpty) {
                       return 'กรุณากรอกรหัสผ่าน';
                     }
-                    if (value.length < 2 || value.length > 8) {
+                    if (value.length < 8) {
                       return 'พาสเวิร์ต้องมีความยาว 8 อักษรขึ้นไป';
                     }
                     return null;
