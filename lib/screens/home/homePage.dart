@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:example/constants.dart';
 import 'package:example/screens/home/detailNewPage.dart';
 import 'package:example/screens/home/promotionPage.dart';
+import 'package:example/screens/home/showNewsPage.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -51,9 +52,14 @@ class _HomePageState extends State<HomePage> {
                     'ข่าววันนี้',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                  Text(
-                    'ดูทั้งหมด',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.orange),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ShowNewsPage()));
+                    },
+                    child: Text(
+                      'ดูทั้งหมด',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.orange),
+                    ),
                   )
                 ],
               ),

@@ -1,3 +1,4 @@
+import 'package:example/screens/login/loginPage.dart';
 import 'package:flutter/material.dart';
 
 import '../login/widgets/InputTextForm.dart';
@@ -113,9 +114,8 @@ class _RegisterPageState extends State<RegisterPage> {
               padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return RegisterPage();
-                  }));
+                  Navigator.pushAndRemoveUntil(
+                          context, MaterialPageRoute(builder: (context) => LoginPage()), (route) => false);
                 },
                 child: Container(
                   height: size.height * 0.06,
