@@ -55,7 +55,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 ContainerSetting(
                   size: size,
                   leadingIcon: 'assets/icons/icon_time.png',
-                  title: 'ประวัติPM',
+                  title: 'ประวัติ',
                   trailingIcon: 'assets/icons/icon_back.png',
                   press: () {},
                 ),
